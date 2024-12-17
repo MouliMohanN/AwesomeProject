@@ -3,6 +3,7 @@ import pluginJs from '@eslint/js';
 import pluginTseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import pluginSecurity from 'eslint-plugin-security';
+import reactCompiler from 'eslint-plugin-react-compiler'
 
 export default [
   {
@@ -17,7 +18,19 @@ export default [
       globals: { ...globals.browser, ...globals.node },
     },
   },
-
+  {
+    plugins: {
+      'react-compiler': reactCompiler,
+    },
+    rules: {
+      'react-compiler/react-compiler': 'error',
+    },
+    settings: {
+      'react-compiler': {
+        target: '18',
+      },
+    }
+  },
   pluginJs.configs.recommended,
   ...pluginTseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
