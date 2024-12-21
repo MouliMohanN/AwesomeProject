@@ -1,6 +1,10 @@
 package com.awesomeproject
 
+import android.app.Activity
 import android.app.Application
+import android.os.Bundle
+import com.awesomeproject.security.SecurityIssueActivity
+import com.awesomeproject.security.SecurityService
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -12,7 +16,7 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
 
-class MainApplication : Application(), ReactApplication {
+class MainApplication : Application(), ReactApplication, Application.ActivityLifecycleCallbacks {
 
   override val reactNativeHost: ReactNativeHost =
       object : DefaultReactNativeHost(this) {
@@ -41,4 +45,17 @@ class MainApplication : Application(), ReactApplication {
       load()
     }
   }
+
+    override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+    override fun onActivityStarted(activity: Activity) {}
+
+    override fun onActivityResumed(activity: Activity) {
+        if (activity is SecurityIssueActivity) return
+        SecurityService.checkAndBlockHacker(activity, { _, _ -> })
+    }
+
+    override fun onActivityPaused(activity: Activity) {}
+    override fun onActivityStopped(activity: Activity) {}
+    override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+    override fun onActivityDestroyed(activity: Activity) {}
 }
