@@ -18,7 +18,10 @@ export const TurboModuleScreen: React.FC<ScreenBaseProps> = ({ navigation }) => 
   };
 
   const getValueFromTurboModule = () => {
-    setValueFromTurboModule(NativeLocalStorage?.getItem('count') ?? 'NA');
+    console.log('NativeLocalStorage before value');
+    const value = NativeLocalStorage?.getItem('count');
+    console.log('NativeLocalStorage after value:', value);
+    setValueFromTurboModule(value ?? 'NA');
   };
 
   return (

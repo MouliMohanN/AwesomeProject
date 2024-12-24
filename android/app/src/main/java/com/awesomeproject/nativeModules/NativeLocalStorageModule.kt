@@ -1,6 +1,7 @@
 package com.awesomeproject.nativeModules
 
 import android.content.Context
+import android.os.Looper
 import com.facebook.react.bridge.ReactApplicationContext
 
 class NativeLocalStorageModule(reactContext: ReactApplicationContext) : NativeLocalStorageSpec(reactContext) {
@@ -15,6 +16,7 @@ class NativeLocalStorageModule(reactContext: ReactApplicationContext) : NativeLo
     }
 
     override fun getItem(key: String): String? {
+        println("${NAME} - thread - ${Thread.currentThread().name}, mainThread - ${Looper.getMainLooper().thread.name}")
         val sharedPref = reactApplicationContext.getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val username = sharedPref.getString(key, null)
         return username.toString()
