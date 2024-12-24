@@ -1,12 +1,9 @@
-import { ParamListBase } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScreenBaseProps } from '../../common/types/ScreenBaseProps';
 
-export interface ReactDevToolsHomeScreenProps {
-  navigation: NativeStackNavigationProp<ParamListBase>;
-}
+export type ReactDevToolsHomeScreenProps = ScreenBaseProps;
 
 interface Todo {
   id: number;
@@ -32,13 +29,13 @@ const TodoListComponent = ({ parentCount }: { parentCount: number }) => {
 };
 
 const TodoListComponentMemo = React.memo(TodoListComponent, (prevProps, nextProps) => {
-  return prevProps.parentCount === nextProps.parentCount
-})
+  return prevProps.parentCount === nextProps.parentCount;
+});
 
 export const ReactDevToolsHomeScreen = ({ navigation }: ReactDevToolsHomeScreenProps) => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [count, setCount] = useState(0);
-    const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState('');
 
   // const textInputViewRef = useRef<TextInput>();
   // const inputTextRef = useRef<string>('');
@@ -136,7 +133,7 @@ export const ReactDevToolsHomeScreen = ({ navigation }: ReactDevToolsHomeScreenP
     //    <Text style={styles.title}>{`Todo List from render function: ${count}`}</Text>
     //  </TouchableOpacity>
     // )
-    return <TodoListComponentMemo parentCount={count} />
+    return <TodoListComponentMemo parentCount={count} />;
     // return <TodoListComponent parentCount={count} />; // works as expected
     // return <>{TodoListComponent({ parentCount: count })}</>; // works as expected, but we shall not follow this syntax
     // return <TodoListComponentInsider parentCount={count} />; // bad

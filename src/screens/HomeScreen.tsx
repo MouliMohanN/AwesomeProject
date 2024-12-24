@@ -1,12 +1,9 @@
-import { ParamListBase } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useEffect, useRef } from 'react';
 import { ScrollView } from 'react-native';
-import { Button } from '../components/Button';
+import { Button } from '../common/components/Button';
+import { ScreenBaseProps } from '../common/types/ScreenBaseProps';
 
-export interface HomeScreenProps {
-  navigation: NativeStackNavigationProp<ParamListBase>;
-}
+export type HomeScreenProps = ScreenBaseProps;
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   const scrollViewRef = useRef<ScrollView>(null);
