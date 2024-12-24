@@ -1,7 +1,6 @@
 package com.awesomeproject.nativeModules
 
 import android.content.Context
-import com.nativelocalstorage.NativeLocalStorageSpec
 import com.facebook.react.bridge.ReactApplicationContext
 
 class NativeLocalStorageModule(reactContext: ReactApplicationContext) : NativeLocalStorageSpec(reactContext) {

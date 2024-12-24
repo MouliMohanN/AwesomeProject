@@ -82,7 +82,7 @@
     "type": "modules",
     "jsSrcsDir": "src/common/specs",
     "android": {
-      "javaPackageName": "com.nativelocalstorage"
+      "javaPackageName": "com.awesomeproject.nativeModules"
     }
   }
 }
