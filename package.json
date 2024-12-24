@@ -30,7 +30,8 @@
     "adb-connect-dev-tools": "adb reverse tcp:8097 tcp:8097",
     "adb-uninstall": "adb uninstall com.awesomeproject",
     "clean-install-android": "remove-node-modules && npm install -f && npm run android",
-    "clean-install-android-release": "remove-node-modules && npm install -f && cd android && gradlew installRelease && cd .."
+    "clean-install-android-release": "remove-node-modules && npm install -f && cd android && gradlew installRelease && cd ..",
+    "generate-spec": "cd android && gradlew generateCodegenArtifactsFromSchema && cd .."
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.11",
@@ -75,5 +76,13 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "codegenConfig": {
+    "name": "NativeLocalStorageSpec",
+    "type": "modules",
+    "jsSrcsDir": "src/common/specs",
+    "android": {
+      "javaPackageName": "com.awesomeproject.nativeModules"
+    }
   }
 }

@@ -1,12 +1,9 @@
-import { ParamListBase } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react';
 import { View } from 'react-native';
-import { Button } from '../../components/Button';
+import { Button } from '../../common/components/Button';
+import { ScreenBaseProps } from '../../common/types/ScreenBaseProps';
 
-export interface CodeParetScreenProps {
-  navigation: NativeStackNavigationProp<ParamListBase>;
-}
+export type CodeParetScreenProps = ScreenBaseProps;
 
 export const CodeParrotScreen: React.FC<CodeParetScreenProps> = ({ navigation }) => {
   return (

@@ -3,6 +3,7 @@ package com.awesomeproject
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import com.awesomeproject.nativeModules.NativeLocalStoragePackage
 import com.awesomeproject.security.SecurityIssueActivity
 import com.awesomeproject.security.SecurityService
 import com.facebook.react.PackageList
@@ -24,6 +25,7 @@ class MainApplication : Application(), ReactApplication, Application.ActivityLif
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
+                add(NativeLocalStoragePackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
