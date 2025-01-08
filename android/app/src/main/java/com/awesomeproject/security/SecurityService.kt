@@ -9,8 +9,8 @@ import com.awesomeproject.security.utils.Emulator
 import com.awesomeproject.security.utils.Frida
 import com.awesomeproject.security.utils.Root
 import com.awesomeproject.security.utils.SystemCalls
-import com.example.app.utils.SECURITY_LOG_TAG
-import com.example.app.utils.decodeToString
+import com.awesomeproject.utils.SECURITY_LOG_TAG
+import com.awesomeproject.utils.decodeToString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -216,7 +216,6 @@ object SecurityService {
         activityContext: Activity,
         callback: (title: String, message: String) -> Unit
     ) {
-        return
         if (isSecurityJobRunning(callback)) {
             return
         }

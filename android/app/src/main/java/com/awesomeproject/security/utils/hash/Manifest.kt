@@ -1,8 +1,8 @@
 package com.awesomeproject.security.utils.hash
 
 import android.content.Context
-import com.example.app.utils.SECURITY_LOG_TAG
-import com.example.app.utils.decodeToString
+import com.awesomeproject.utils.SECURITY_LOG_TAG
+import com.awesomeproject.utils.decodeToString
 import java.io.File
 import java.security.MessageDigest
 import java.util.zip.ZipFile

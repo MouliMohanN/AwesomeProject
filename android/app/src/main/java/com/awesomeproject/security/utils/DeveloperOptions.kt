@@ -3,8 +3,8 @@ package com.awesomeproject.security.utils
 import android.content.Context
 import android.os.Build
 import android.provider.Settings
-import com.example.app.utils.SECURITY_LOG_TAG
-import com.example.app.utils.decodeToString
+import com.awesomeproject.utils.SECURITY_LOG_TAG
+import com.awesomeproject.utils.decodeToString
 
 object DeveloperOptions {
     fun isDetected(context: Context): Boolean {

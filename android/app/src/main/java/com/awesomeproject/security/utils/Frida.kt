@@ -1,7 +1,7 @@
 package com.awesomeproject.security.utils
 
-import com.example.app.utils.SECURITY_LOG_TAG
-import com.example.app.utils.decodeToString
+import com.awesomeproject.utils.SECURITY_LOG_TAG
+import com.awesomeproject.utils.decodeToString
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader

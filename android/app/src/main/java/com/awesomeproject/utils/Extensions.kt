@@ -1,4 +1,4 @@
-package com.example.app.utils
+package com.awesomeproject.utils
 
 import android.util.Base64
 
