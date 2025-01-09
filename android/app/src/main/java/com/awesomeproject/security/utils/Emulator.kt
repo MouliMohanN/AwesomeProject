@@ -190,6 +190,23 @@ object Emulator {
             "sdkX86 - ${sdkX86.decodeToString()}\n" +
             "vbox86p - ${vbox86p.decodeToString()}")
 
+    println("${SECURITY_LOG_TAG.decodeToString()} - Build \n" +
+            "Model - ${Build.MODEL}, \n" +
+            "Product - ${Build.PRODUCT}, \n" +
+            "Hardware - ${Build.HARDWARE}, \n" +
+            "Manufacturer - ${Build.MANUFACTURER}, \n" +
+            "DEVICE - ${Build.DEVICE}, \n" +
+            "BOARD - ${Build.BOARD}, \n " +
+            "BOOTLOADER - ${Build.BOOTLOADER}, \n" +
+            "BRAND - ${Build.BRAND}, \n" +
+            "DISPLAY - ${Build.DISPLAY}, \n" +
+            "FINGERPRINT - ${Build.FINGERPRINT}, \n" +
+            "HOST - ${Build.HOST}, \n" +
+            "ID - ${Build.ID}, \n" +
+            "TAGS - ${Build.TAGS}, \n" +
+            "TYPE - ${Build.TYPE}, \n" +
+            "UNKNOWN - ${Build.UNKNOWN}, \n" +
+            "USER - ${Build.USER}")
     return (Build.MANUFACTURER.lowercase().contains(genyMotion.decodeToString())
       || Build.MANUFACTURER.lowercase().contains(unknown.decodeToString())
       || Build.MODEL.lowercase().contains(googleSdk.decodeToString())
