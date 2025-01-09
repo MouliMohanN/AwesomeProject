@@ -49,6 +49,43 @@ Go to the folder you want to copy the apk on the computer
 
 - WIP
 
+### Frida
+
+- Know which ABI is your phone/emulator
+
+```bash
+- adb shell getprop ro.product.cpu.abilist
+```
+
+- Know if device is rooted
+
+```bash
+- adb shell whoami
+- adb root
+```
+
+- Install Frida
+
+```bash
+- pip install frida-tools
+- frida — version <or> pip show frida
+- adb push frida-server /data/local/tmp/
+- adb shell "chmod 755 /data/local/tmp/frida-server"
+- adb shell "/data/local/tmp/frida-server &"
+```
+
+- Check running process
+
+```bash
+- frida-ps -U <or> frida-ps -D 127.0.0.1:62025
+```
+
+- Check Installed applications
+
+```bash
+- frida-ps -Uai
+```
+
 ## References
 
 - [Youtube, Android Reversing #1](https://youtu.be/uc7eZGE07ps?si=cuH9eJsH1VEYbKN1) - Follow up #2, #3 and other videos on the channel
