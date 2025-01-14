@@ -84,6 +84,13 @@ Go to the folder you want to copy the apk on the computer
 
 ```bash
 - frida-ps -Uai
+- frida-ps -Ua
+```
+
+- Active internet connections (only servers)
+
+```bash
+- adb shell netstat -tulpn
 ```
 
 ## References
