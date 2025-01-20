@@ -3,6 +3,7 @@ package com.awesomeproject
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import androidx.multidex.MultiDexApplication
 import com.awesomeproject.nativeModules.NativeLocalStoragePackage
 import com.awesomeproject.security.SecurityIssueActivity
 import com.awesomeproject.security.SecurityService
@@ -16,8 +17,9 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import io.invertase.firebase.firestore.ReactNativeFirebaseFirestorePackage;
 
-class MainApplication : Application(), ReactApplication, Application.ActivityLifecycleCallbacks {
+class MainApplication : MultiDexApplication(), ReactApplication, Application.ActivityLifecycleCallbacks {
 
   override val reactNativeHost: ReactNativeHost =
       object : DefaultReactNativeHost(this) {
@@ -26,6 +28,7 @@ class MainApplication : Application(), ReactApplication, Application.ActivityLif
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
                 add(NativeLocalStoragePackage())
+                add(ReactNativeFirebaseFirestorePackage())
             }
 
         override fun getJSMainModuleName(): String = "index"

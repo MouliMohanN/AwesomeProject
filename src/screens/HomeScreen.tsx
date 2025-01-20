@@ -18,6 +18,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
       <Button title='React dev tools' onPress={() => navigation.navigate('ReactDevToolsHome')} />
       <Button title='CodeParrot Ai' onPress={() => navigation.navigate('CodeParrotScreen')} />
       <Button title='Native module' onPress={() => navigation.navigate('NativeModuleScreen')} />
+      <Button title='Firebase Test' onPress={() => navigation.navigate('FirebaseHomeScreen')} />
     </ScrollView>
   );
 };

@@ -2147,17 +2147,17 @@
   resolved "https://registry.npmjs.org/@react-native-community/masked-view/-/masked-view-0.1.11.tgz"
   integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
 
-"@react-native-firebase/app@^21.7.1", "@react-native-firebase/app@21.7.1":
-  version "21.7.1"
-  resolved "https://registry.npmjs.org/@react-native-firebase/app/-/app-21.7.1.tgz"
-  integrity sha512-sBXKJE+Uu2+G8SBQzUXMEIyWK932GqxfKsCAVOfzEegxknQuQ8l6qx/tIbMeEFuBJlo334GNctMa4ehePog5lQ==
+"@react-native-firebase/app@21.6.1":
+  version "21.6.1"
+  resolved "https://registry.npmjs.org/@react-native-firebase/app/-/app-21.6.1.tgz"
+  integrity sha512-o1i3aQMtJeofue+73j/8KO2l+/bRHaSHqOl7FtIeZfajQZaulaROugD2Rr2Mlc1o7LfEUyoDOoij9nGdrydEyw==
   dependencies:
     firebase "10.13.2"
 
-"@react-native-firebase/firestore@^21.7.1":
-  version "21.7.1"
-  resolved "https://registry.npmjs.org/@react-native-firebase/firestore/-/firestore-21.7.1.tgz"
-  integrity sha512-tW1nfya6q/OK0KvQv3/6dJlyeagPoWWGKIvAhPDxjun33ZvCPPsKDJdRkSluaE6cszsCa2IP7srg56FespaWJA==
+"@react-native-firebase/firestore@21.6.1":
+  version "21.6.1"
+  resolved "https://registry.npmjs.org/@react-native-firebase/firestore/-/firestore-21.6.1.tgz"
+  integrity sha512-i3RQM11zTRCYc7/KdD0MiCm7UyyTecDXG/89lEv5hvVJMS6ltIfK+0rDheSpBzYlK4kNoK765jnvVAQxIFEqbA==
 
 "@react-native/assets-registry@0.76.5":
   version "0.76.5"
@@ -5435,6 +5435,11 @@ jest@*, jest@29.7.0:
     "@jest/types" "^29.6.3"
     import-local "^3.0.2"
     jest-cli "^29.7.0"
+
+jetifier@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/jetifier/-/jetifier-2.0.0.tgz"
+  integrity sha512-J4Au9KuT74te+PCCCHKgAjyLlEa+2VyIAEPNCdE5aNkAJ6FAJcAqcdzEkSnzNksIa9NkGmC4tPiClk2e7tCJuQ==
 
 joi@^17.2.1:
   version "17.13.3"
