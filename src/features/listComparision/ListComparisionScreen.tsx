@@ -23,6 +23,7 @@ export const ListComparisionScreen = (props: ScreenBaseProps) => {
     <View>
       <Button title='Flat List' onPress={() => props.navigation.navigate('FlatListScreen')} />
       <Button title='Flash List' onPress={() => props.navigation.navigate('FlashListScreen')} />
+      <Button title='Legend List' onPress={() => props.navigation.navigate('LegendListScreen')} />
     </View>
   );
 };

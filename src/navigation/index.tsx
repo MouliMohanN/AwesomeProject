@@ -8,6 +8,7 @@ import { MarketScreen } from '../features/codeParrotAi/MarketScreen';
 import { ScreenersScreen } from '../features/codeParrotAi/ScreenersScreen';
 import { FlashListScreen } from '../features/listComparision/FlashList';
 import { FlatListScreen } from '../features/listComparision/FlatList';
+import { LegendListScreen } from '../features/listComparision/LegendList';
 import { ListComparisionScreen } from '../features/listComparision/ListComparisionScreen';
 import { NativeModulesScreen } from '../features/nativeModules/NativeModulesScreen';
 import { TurboModuleScreen } from '../features/nativeModules/turbo/TurboModuleScreen';
@@ -41,6 +42,7 @@ export const RootNavigator = () => {
           <Stack.Screen name='ListComparisionScreen' component={ListComparisionScreen} />
           <Stack.Screen name='FlatListScreen' component={FlatListScreen} />
           <Stack.Screen name='FlashListScreen' component={FlashListScreen} />
+          <Stack.Screen name='LegendListScreen' component={LegendListScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
