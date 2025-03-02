@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
 import { View } from 'react-native';
-import { Text } from 'react-native-paper';
 import { Button } from '../../common/components/Button';
 import { ScreenBaseProps } from '../../common/types/ScreenBaseProps';
 import { getRandomNumber } from '../../common/utils/util';
+import { ListItem } from './ListItem';
 
 export const listData: Array<string> = [];
 
 export const renderListItem = ({ item }: { item: string }) => {
-  return (
-    <View style={{ height: 50, paddingHorizontal: 16, borderBottomWidth: 1, borderBottomColor: 'gray' }}>
-      <Text>{item}</Text>
-    </View>
-  );
+  console.log('renderListItem function', item);
+  return <ListItem item={item} />;
 };
 
 export const ListComparisionScreen = (props: ScreenBaseProps) => {
