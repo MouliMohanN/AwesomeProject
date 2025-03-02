@@ -22,13 +22,10 @@ export const ListComparisionScreen = (props: ScreenBaseProps) => {
       .forEach(() => listData.push(`Item_${listData.length}_${getRandomNumber()}`));
   }, []);
 
-  const onPress = () => {
-    props.navigation.navigate('FlatListScreen');
-  };
-
   return (
     <View>
-      <Button title='Flat List' onPress={onPress} />
+      <Button title='Flat List' onPress={() => props.navigation.navigate('FlatListScreen')} />
+      <Button title='Flash List' onPress={() => props.navigation.navigate('FlashListScreen')} />
     </View>
   );
 };

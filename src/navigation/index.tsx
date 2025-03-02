@@ -6,6 +6,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { CodeParrotScreen } from '../features/codeParrotAi/CodeParrotScreen';
 import { MarketScreen } from '../features/codeParrotAi/MarketScreen';
 import { ScreenersScreen } from '../features/codeParrotAi/ScreenersScreen';
+import { FlashListScreen } from '../features/listComparision/FlashList';
 import { FlatListScreen } from '../features/listComparision/FlatList';
 import { ListComparisionScreen } from '../features/listComparision/ListComparisionScreen';
 import { NativeModulesScreen } from '../features/nativeModules/NativeModulesScreen';
@@ -39,6 +40,7 @@ export const RootNavigator = () => {
 
           <Stack.Screen name='ListComparisionScreen' component={ListComparisionScreen} />
           <Stack.Screen name='FlatListScreen' component={FlatListScreen} />
+          <Stack.Screen name='FlashListScreen' component={FlashListScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
